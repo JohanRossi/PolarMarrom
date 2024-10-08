@@ -1,6 +1,6 @@
 ﻿namespace PolarMarrom
 {
-    partial class PolarMarrom
+    partial class frmMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,21 +41,28 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.produtoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarProdutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -123,9 +131,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(18, 389);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(160, 20);
+            this.label6.Size = new System.Drawing.Size(116, 20);
             this.label6.TabIndex = 6;
-            this.label6.Text = "Quantidade de items:";
+            this.label6.Text = "Qntd. de items:";
             // 
             // label7
             // 
@@ -152,8 +160,8 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Blue;
-            this.button1.Location = new System.Drawing.Point(22, 549);
+            this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button1.Location = new System.Drawing.Point(22, 547);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 54);
             this.button1.TabIndex = 10;
@@ -162,20 +170,13 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Blue;
-            this.button2.Location = new System.Drawing.Point(224, 549);
+            this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button2.Location = new System.Drawing.Point(225, 547);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(106, 54);
             this.button2.TabIndex = 11;
             this.button2.Text = "Novo Pedido";
             this.button2.UseVisualStyleBackColor = false;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(769, 153);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(224, 26);
-            this.textBox3.TabIndex = 12;
             // 
             // label8
             // 
@@ -234,6 +235,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.AliceBlue;
+            this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.richTextBox1);
@@ -245,6 +247,40 @@
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(10, 176);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(224, 28);
+            this.comboBox1.TabIndex = 17;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(66, 413);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(240, 147);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button3.Location = new System.Drawing.Point(190, 585);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(149, 42);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "Adicionar Item";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(10, 220);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(329, 166);
+            this.richTextBox1.TabIndex = 14;
+            this.richTextBox1.Text = "";
             // 
             // numericUpDown1
             // 
@@ -259,40 +295,61 @@
             0,
             0});
             // 
-            // richTextBox1
+            // menuStrip1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(10, 220);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(329, 166);
-            this.richTextBox1.TabIndex = 14;
-            this.richTextBox1.Text = "";
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.produtoToolStripMenuItem,
+            this.usuarioToolStripMenuItem,
+            this.sairToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1110, 36);
+            this.menuStrip1.TabIndex = 19;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // button3
+            // produtoToolStripMenuItem
             // 
-            this.button3.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button3.Location = new System.Drawing.Point(179, 592);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(149, 42);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Adicionar Item";
-            this.button3.UseVisualStyleBackColor = false;
+            this.produtoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editarProdutoToolStripMenuItem});
+            this.produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
+            this.produtoToolStripMenuItem.Size = new System.Drawing.Size(93, 29);
+            this.produtoToolStripMenuItem.Text = "Produto";
             // 
-            // pictureBox1
+            // editarProdutoToolStripMenuItem
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(51, 426);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(240, 147);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
+            this.editarProdutoToolStripMenuItem.Name = "editarProdutoToolStripMenuItem";
+            this.editarProdutoToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
+            this.editarProdutoToolStripMenuItem.Text = "Editar Produto";
+            this.editarProdutoToolStripMenuItem.Click += new System.EventHandler(this.editarProdutoToolStripMenuItem_Click);
             // 
-            // PolarMarrom
+            // usuarioToolStripMenuItem
+            // 
+            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
+            this.usuarioToolStripMenuItem.Text = "Usuario";
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(57, 29);
+            this.sairToolStripMenuItem.Text = "Sair";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cyan;
             this.ClientSize = new System.Drawing.Size(1110, 622);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBox2);
@@ -307,14 +364,18 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Name = "PolarMarrom";
+            this.MainMenuStrip = this.menuStrip1;
+            this.Name = "frmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PolarMarrom";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,7 +395,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -345,5 +405,12 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem produtoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editarProdutoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
     }
 }

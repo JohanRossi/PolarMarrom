@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace PolarMarrom
 {
-    public partial class PolarMarrom : Form
+    public partial class frmMenu : Form
     {
-        public PolarMarrom()
+        public frmMenu()
         {
             InitializeComponent();
+        }
+
+        private void editarProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEditarProduto EditarProduto = new frmEditarProduto();
+            DialogResult resposta = EditarProduto.ShowDialog();
         }
     }
 }
