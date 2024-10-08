@@ -1,6 +1,6 @@
 ﻿namespace PolarMarrom
 {
-    partial class PolarMarrom
+    partial class frmMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lsbListaPedidos = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -40,21 +41,28 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAdicionarItem = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.nmrQuantidadeItem = new System.Windows.Forms.NumericUpDown();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.produtoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarProdutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrQuantidadeItem)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -87,17 +95,17 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Nome";
             // 
-            // listBox1
+            // lsbListaPedidos
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Items.AddRange(new object[] {
+            this.lsbListaPedidos.FormattingEnabled = true;
+            this.lsbListaPedidos.ItemHeight = 20;
+            this.lsbListaPedidos.Items.AddRange(new object[] {
             "Flocos",
             "Morango"});
-            this.listBox1.Location = new System.Drawing.Point(15, 143);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(379, 444);
-            this.listBox1.TabIndex = 3;
+            this.lsbListaPedidos.Location = new System.Drawing.Point(15, 143);
+            this.lsbListaPedidos.Name = "lsbListaPedidos";
+            this.lsbListaPedidos.Size = new System.Drawing.Size(379, 444);
+            this.lsbListaPedidos.TabIndex = 3;
             // 
             // label4
             // 
@@ -123,9 +131,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(18, 389);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(160, 20);
+            this.label6.Size = new System.Drawing.Size(116, 20);
             this.label6.TabIndex = 6;
-            this.label6.Text = "Quantidade de items:";
+            this.label6.Text = "Qntd. de items:";
             // 
             // label7
             // 
@@ -152,8 +160,8 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Blue;
-            this.button1.Location = new System.Drawing.Point(22, 549);
+            this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button1.Location = new System.Drawing.Point(22, 547);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 54);
             this.button1.TabIndex = 10;
@@ -162,20 +170,13 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Blue;
-            this.button2.Location = new System.Drawing.Point(224, 549);
+            this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button2.Location = new System.Drawing.Point(225, 547);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(106, 54);
             this.button2.TabIndex = 11;
             this.button2.Text = "Novo Pedido";
             this.button2.UseVisualStyleBackColor = false;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(769, 153);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(224, 26);
-            this.textBox3.TabIndex = 12;
             // 
             // label8
             // 
@@ -222,7 +223,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.groupBox1.Controls.Add(this.listBox1);
+            this.groupBox1.Controls.Add(this.lsbListaPedidos);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(348, -24);
             this.groupBox1.Name = "groupBox1";
@@ -234,10 +235,11 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.AliceBlue;
+            this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.pictureBox1);
-            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.btnAdicionarItem);
             this.groupBox2.Controls.Add(this.richTextBox1);
-            this.groupBox2.Controls.Add(this.numericUpDown1);
+            this.groupBox2.Controls.Add(this.nmrQuantidadeItem);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Location = new System.Drawing.Point(759, -24);
             this.groupBox2.Name = "groupBox2";
@@ -246,18 +248,32 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
-            // numericUpDown1
+            // comboBox1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(244, 177);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(95, 26);
-            this.numericUpDown1.TabIndex = 0;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(10, 176);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(224, 28);
+            this.comboBox1.TabIndex = 17;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(66, 413);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(240, 147);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnAdicionarItem
+            // 
+            this.btnAdicionarItem.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnAdicionarItem.Location = new System.Drawing.Point(190, 585);
+            this.btnAdicionarItem.Name = "btnAdicionarItem";
+            this.btnAdicionarItem.Size = new System.Drawing.Size(149, 42);
+            this.btnAdicionarItem.TabIndex = 15;
+            this.btnAdicionarItem.Text = "Adicionar Item";
+            this.btnAdicionarItem.UseVisualStyleBackColor = false;
+            this.btnAdicionarItem.Click += new System.EventHandler(this.btnAdicionarItem_Click);
             // 
             // richTextBox1
             // 
@@ -267,32 +283,74 @@
             this.richTextBox1.TabIndex = 14;
             this.richTextBox1.Text = "";
             // 
-            // button3
+            // nmrQuantidadeItem
             // 
-            this.button3.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button3.Location = new System.Drawing.Point(179, 592);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(149, 42);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Adicionar Item";
-            this.button3.UseVisualStyleBackColor = false;
+            this.nmrQuantidadeItem.Location = new System.Drawing.Point(244, 177);
+            this.nmrQuantidadeItem.Name = "nmrQuantidadeItem";
+            this.nmrQuantidadeItem.Size = new System.Drawing.Size(95, 26);
+            this.nmrQuantidadeItem.TabIndex = 0;
+            this.nmrQuantidadeItem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nmrQuantidadeItem.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // pictureBox1
+            // menuStrip1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(51, 426);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(240, 147);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.produtoToolStripMenuItem,
+            this.usuarioToolStripMenuItem,
+            this.sairToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1110, 33);
+            this.menuStrip1.TabIndex = 19;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // PolarMarrom
+            // produtoToolStripMenuItem
+            // 
+            this.produtoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editarProdutoToolStripMenuItem});
+            this.produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
+            this.produtoToolStripMenuItem.Size = new System.Drawing.Size(93, 29);
+            this.produtoToolStripMenuItem.Text = "Produto";
+            // 
+            // editarProdutoToolStripMenuItem
+            // 
+            this.editarProdutoToolStripMenuItem.Name = "editarProdutoToolStripMenuItem";
+            this.editarProdutoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.editarProdutoToolStripMenuItem.Text = "Cadastrar Produto";
+            this.editarProdutoToolStripMenuItem.Click += new System.EventHandler(this.editarProdutoToolStripMenuItem_Click);
+            // 
+            // usuarioToolStripMenuItem
+            // 
+            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
+            this.usuarioToolStripMenuItem.Text = "Usuario";
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(57, 29);
+            this.sairToolStripMenuItem.Text = "Sair";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cyan;
             this.ClientSize = new System.Drawing.Size(1110, 622);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBox2);
@@ -307,14 +365,19 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Name = "PolarMarrom";
+            this.MainMenuStrip = this.menuStrip1;
+            this.Name = "frmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PolarMarrom";
+            this.Load += new System.EventHandler(this.frmMenu_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrQuantidadeItem)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,7 +388,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lsbListaPedidos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -334,16 +397,22 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAdicionarItem;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nmrQuantidadeItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem produtoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editarProdutoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
     }
 }
