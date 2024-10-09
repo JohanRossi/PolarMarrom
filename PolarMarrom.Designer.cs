@@ -275,13 +275,21 @@
             this.btnAdicionarItem.UseVisualStyleBackColor = false;
             this.btnAdicionarItem.Click += new System.EventHandler(this.btnAdicionarItem_Click);
             // 
-            // richTextBox1
+            // menuStrip1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(10, 220);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(329, 166);
-            this.richTextBox1.TabIndex = 14;
-            this.richTextBox1.Text = "";
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.produtoToolStripMenuItem,
+            this.usuarioToolStripMenuItem,
+            this.sairToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1110, 36);
+            this.menuStrip1.TabIndex = 19;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // produtoToolStripMenuItem
             // 
             // nmrQuantidadeItem
             // 

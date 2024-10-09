@@ -29,12 +29,12 @@ namespace PolarMarrom
                 MessageBox.Show("Escreva um nome para o produto!");
                 return;
             }
-
+            
             if (nmrValorDoProduto.Value == 0)
             {
                 MessageBox.Show("Valor não pode ser zero!");
                 return;
-            }
+        }
 
             Produto produto = new Produto(txtNomeProduto.Text, rbtDescriçãoEditar.Text, nmrValorDoProduto.Value);
             listaProdutos.Add(produto);
@@ -51,15 +51,15 @@ namespace PolarMarrom
             );
 
             if (resultado == DialogResult.Yes)
-            {
+        {
                 txtNomeProduto.Clear();
                 rbtDescriçãoEditar.Clear();
                 nmrValorDoProduto.Value = 0;
 
                 txtNomeProduto.Focus();
-            }
+        }
             else
-            {
+        {
                 this.Close();
             }
         }
