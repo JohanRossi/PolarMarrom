@@ -20,8 +20,8 @@ namespace PolarMarrom
         private void button1_Click(object sender, EventArgs e)
         {
             frmMenu SalvarUsuario = new frmMenu();
-            DialogResult resposta = SalvarUsuario.ShowDialog();
             this.Hide();
+            SalvarUsuario.Show();
         }
     }
 }

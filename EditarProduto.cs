@@ -68,5 +68,15 @@ namespace PolarMarrom
         {
             listaProdutos = ArquivosJson.ImportarProdutosJson();
         }
+
+        private void nmrValorDoProduto_Enter(object sender, EventArgs e)
+        {
+            nmrValorDoProduto.Select();
+        }
+
+        private void btnCancelarProduto_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -91,11 +91,19 @@
             // 
             // nmrValorDoProduto
             // 
-            this.nmrValorDoProduto.Location = new System.Drawing.Point(111, 79);
+            this.nmrValorDoProduto.DecimalPlaces = 2;
+            this.nmrValorDoProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nmrValorDoProduto.Location = new System.Drawing.Point(116, 79);
+            this.nmrValorDoProduto.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
             this.nmrValorDoProduto.Name = "nmrValorDoProduto";
-            this.nmrValorDoProduto.Size = new System.Drawing.Size(58, 26);
-            this.nmrValorDoProduto.TabIndex = 5;
-            this.nmrValorDoProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nmrValorDoProduto.Size = new System.Drawing.Size(302, 30);
+            this.nmrValorDoProduto.TabIndex = 1;
+            this.nmrValorDoProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nmrValorDoProduto.Enter += new System.EventHandler(this.nmrValorDoProduto_Enter);
             // 
             // panel1
             // 
@@ -116,12 +124,14 @@
             // btnCancelarProduto
             // 
             this.btnCancelarProduto.BackColor = System.Drawing.Color.Red;
+            this.btnCancelarProduto.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelarProduto.Location = new System.Drawing.Point(52, 282);
             this.btnCancelarProduto.Name = "btnCancelarProduto";
             this.btnCancelarProduto.Size = new System.Drawing.Size(119, 55);
-            this.btnCancelarProduto.TabIndex = 9;
+            this.btnCancelarProduto.TabIndex = 4;
             this.btnCancelarProduto.Text = "Cancelar";
             this.btnCancelarProduto.UseVisualStyleBackColor = false;
+            this.btnCancelarProduto.Click += new System.EventHandler(this.btnCancelarProduto_Click);
             // 
             // btnSalvarProduto
             // 
@@ -129,7 +139,7 @@
             this.btnSalvarProduto.Location = new System.Drawing.Point(292, 282);
             this.btnSalvarProduto.Name = "btnSalvarProduto";
             this.btnSalvarProduto.Size = new System.Drawing.Size(126, 55);
-            this.btnSalvarProduto.TabIndex = 8;
+            this.btnSalvarProduto.TabIndex = 3;
             this.btnSalvarProduto.Text = "Salvar";
             this.btnSalvarProduto.UseVisualStyleBackColor = false;
             this.btnSalvarProduto.Click += new System.EventHandler(this.btnSalvarProduto_Click);
@@ -139,7 +149,7 @@
             this.txtNomeProduto.Location = new System.Drawing.Point(116, 35);
             this.txtNomeProduto.Name = "txtNomeProduto";
             this.txtNomeProduto.Size = new System.Drawing.Size(302, 26);
-            this.txtNomeProduto.TabIndex = 7;
+            this.txtNomeProduto.TabIndex = 0;
             // 
             // rbtDescriçãoEditar
             // 

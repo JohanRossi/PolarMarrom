@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lsbListaPedidos = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,7 +46,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.cmbProdutoProcurar = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAdicionarItem = new System.Windows.Forms.Button();
             this.nmrQuantidadeItem = new System.Windows.Forms.NumericUpDown();
@@ -57,6 +57,7 @@
             this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.lsbListaPedidos = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -93,18 +94,6 @@
             this.label3.Size = new System.Drawing.Size(51, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Nome";
-            // 
-            // lsbListaPedidos
-            // 
-            this.lsbListaPedidos.FormattingEnabled = true;
-            this.lsbListaPedidos.ItemHeight = 20;
-            this.lsbListaPedidos.Items.AddRange(new object[] {
-            "Flocos",
-            "Morango"});
-            this.lsbListaPedidos.Location = new System.Drawing.Point(15, 143);
-            this.lsbListaPedidos.Name = "lsbListaPedidos";
-            this.lsbListaPedidos.Size = new System.Drawing.Size(379, 444);
-            this.lsbListaPedidos.TabIndex = 3;
             // 
             // label4
             // 
@@ -234,7 +223,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.AliceBlue;
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.richTextBox1);
+            this.groupBox2.Controls.Add(this.cmbProdutoProcurar);
             this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Controls.Add(this.btnAdicionarItem);
             this.groupBox2.Controls.Add(this.nmrQuantidadeItem);
@@ -246,13 +236,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
-            // comboBox1
+            // richTextBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(10, 176);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(224, 28);
-            this.comboBox1.TabIndex = 17;
+            this.richTextBox1.Location = new System.Drawing.Point(10, 234);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(329, 155);
+            this.richTextBox1.TabIndex = 18;
+            this.richTextBox1.Text = "";
+            // 
+            // cmbProdutoProcurar
+            // 
+            this.cmbProdutoProcurar.FormattingEnabled = true;
+            this.cmbProdutoProcurar.Location = new System.Drawing.Point(10, 176);
+            this.cmbProdutoProcurar.Name = "cmbProdutoProcurar";
+            this.cmbProdutoProcurar.Size = new System.Drawing.Size(224, 28);
+            this.cmbProdutoProcurar.TabIndex = 17;
+            this.cmbProdutoProcurar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbProdutoProcurar_KeyPress);
             // 
             // pictureBox1
             // 
@@ -288,7 +287,6 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.produtoToolStripMenuItem,
@@ -332,6 +330,15 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // lsbListaPedidos
+            // 
+            this.lsbListaPedidos.FormattingEnabled = true;
+            this.lsbListaPedidos.ItemHeight = 20;
+            this.lsbListaPedidos.Location = new System.Drawing.Point(15, 143);
+            this.lsbListaPedidos.Name = "lsbListaPedidos";
+            this.lsbListaPedidos.Size = new System.Drawing.Size(379, 444);
+            this.lsbListaPedidos.TabIndex = 3;
             // 
             // frmMenu
             // 
@@ -379,7 +386,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox lsbListaPedidos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -397,12 +403,14 @@
         private System.Windows.Forms.Button btnAdicionarItem;
         private System.Windows.Forms.NumericUpDown nmrQuantidadeItem;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbProdutoProcurar;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem produtoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarProdutoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.ListBox lsbListaPedidos;
     }
 }
