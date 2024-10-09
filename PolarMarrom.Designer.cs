@@ -50,7 +50,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAdicionarItem = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.nmrQuantidadeItem = new System.Windows.Forms.NumericUpDown();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.produtoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -238,7 +237,6 @@
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Controls.Add(this.btnAdicionarItem);
-            this.groupBox2.Controls.Add(this.richTextBox1);
             this.groupBox2.Controls.Add(this.nmrQuantidadeItem);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Location = new System.Drawing.Point(759, -24);
@@ -274,14 +272,6 @@
             this.btnAdicionarItem.Text = "Adicionar Item";
             this.btnAdicionarItem.UseVisualStyleBackColor = false;
             this.btnAdicionarItem.Click += new System.EventHandler(this.btnAdicionarItem_Click);
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(10, 220);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(329, 166);
-            this.richTextBox1.TabIndex = 14;
-            this.richTextBox1.Text = "";
             // 
             // nmrQuantidadeItem
             // 
@@ -321,7 +311,7 @@
             // editarProdutoToolStripMenuItem
             // 
             this.editarProdutoToolStripMenuItem.Name = "editarProdutoToolStripMenuItem";
-            this.editarProdutoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.editarProdutoToolStripMenuItem.Size = new System.Drawing.Size(259, 34);
             this.editarProdutoToolStripMenuItem.Text = "Cadastrar Produto";
             this.editarProdutoToolStripMenuItem.Click += new System.EventHandler(this.editarProdutoToolStripMenuItem_Click);
             // 
@@ -369,6 +359,7 @@
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PolarMarrom";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMenu_FormClosed);
             this.Load += new System.EventHandler(this.frmMenu_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -404,7 +395,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnAdicionarItem;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.NumericUpDown nmrQuantidadeItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox comboBox1;

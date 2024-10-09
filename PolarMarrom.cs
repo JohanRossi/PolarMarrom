@@ -50,5 +50,10 @@ namespace PolarMarrom
             lsbListaPedidos.Items.Clear();
             lsbListaPedidos.Items.AddRange(pedidoAtual.Items.ToArray());
         }
+
+        private void frmMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
